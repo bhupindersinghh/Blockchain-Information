@@ -1,13 +1,105 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.card {
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  background-color: rgb(177, 177, 204);
+}
+
+.converter {
+  display: block;
+}
+
+.converter h1 {
+  text-align: center;
+  margin-top: 5rem;
+  color: slateblue;
+}
+
+.converter .options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+
+.converter .btnC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+
+.converter .inputValue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+
+.converter .answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: rgb(12, 1, 1);
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 18em;
+  height: 3em;
+  margin: 2em;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #000000;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
